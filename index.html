@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>映画情報サイト</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function () {
+            var topBtn = $('#page-top');
+            topBtn.hide();
+            //スクロールが100pxに達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    topBtn.fadeIn();
+                } else {
+                    topBtn.fadeOut();
+                }
+            });
+            //スクロールしてトップ
+            topBtn.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <a id="jump"></a>
+    <div id="wrap">
+        <header>
+            <img src="images/logo.png" alt="" id="logo">
+            <nav id="gnav">
+                <ul>
+                    <li>Home</li>
+                    <li>Introduction</li>
+                    <li>Story</li>
+                    <li>Cast</li>
+                </ul>
+            </nav>
+        </header>
+        <img src="images/top01.jpg" alt="" id="mainvisual">
+        <main id="home">
+            <p class="txt">
+                2050年代。謎の組織であるギャラクターは全世界に宣戦布告を行い、わずか17日で地球の半分を占領した。人類は不思議な結晶体である石に人類絶滅阻止をかけることになり、それを受けて国際科学技術庁の南部博士は、約800万人に1人といわれるその石の能力を引き出せる適合者探しを開始する。南部博士は適合者5人を探し出した上で施設に強制収容し、究極の兵器になるよう訓練を行う。そして究極の兵器に変身した5人はガッチャマンとなってギャラクターに立ち向かうのであった。
+            </p>
+            <nav id="three">
+                <section class="txt">
+                    <h2>イントロダクション</h2>
+                    <img src="images/img01.jpg" alt="">
+                </section>
+
+                <section class="txt">
+                    <h2>ストーリーテキスト</h2>
+                    <img src="images/img02.jpg" alt="">
+                </section>
+
+                <section class="txt">
+                    <h2>キャストテキスト</h2>
+                    <img src="images/img03.jpg" alt="">
+                </section>
+            </nav>
+        </main>
+
+        <p id="page-top"><a href="#jump"><img src="images/totop.png"></img></a></p>
+
+        <footer>
+            <nav id="footer-nav">
+                <ul>
+                    <li>Home</li>
+                    <li>Introduction</li>
+                    <li>Story</li>
+                    <li>Cast</li>
+                </ul>
+            </nav>
+            <p class="copy">Copyright &copy 2020 李福昌 All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+
+</html>
