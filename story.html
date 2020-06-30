@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>映画情報サイト | Story</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function () {
+            var topBtn = $('#page-top');
+            topBtn.hide();
+            //スクロールが100pxに達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    topBtn.fadeIn();
+                } else {
+                    topBtn.fadeOut();
+                }
+            });
+            //スクロールしてトップ
+            topBtn.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <a id="jump"></a>
+    <div id="wrap">
+        <header>
+            <img src="images/logo.png" alt="" id="logo">
+            <nav id="gnav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li><a href="story.html">Story</a></li>
+                    <li><a href="cast.html">Cast</a></li>
+                </ul>
+            </nav>
+        </header>
+        <img src="images/page_top.jpg" alt="" id="storymainvisual">
+
+        <main id="storyhome">
+            <section class="storysection">
+                <h1 class="storyh1">ストーリー</h1>
+                <p class="storytxt">
+                    科学忍者隊はソーラーシフト計画を成功の一歩手前で阻止し、総裁Xの野望を打ち砕いた。ソーラーシフト計画で荒れ果てた地球は徐々にではあるが復興を始めていた。その一方で、ドクター・ラッフェルを失い、彼の手によりサイボーグとして生まれ変わったジョーに内蔵されたブラックボックスの解析とエネルギー補給の目処は進まず、日を追う毎に死が近づいていく……。
+                    </br>
+                    ニューゴッドフェニックスを撃墜され、満身創痍の4人（ジョー以外）を救った鴨三郎技師長は彼らをガッチャマン基地へと迎え入れ、新たなる翼「ガッチャ・スパルタン」と新たな武器「ガッチャマンフェンサー」（剣）等を与える。ジョーのエネルギー補給の目処も立ち、健は仲間達とともに三度ギャラクターを迎え撃つ。が、ガッチャマンフェンサーは健の命をも削るという、文字通り両刃の剣であることを5人はまだ知らない……
+                </p>
+            </section>
+
+            <nav id="storytwo">
+                <section>
+                    <img src="images/page_story01.jpg" alt="">
+                </section>
+                <section id="sectionthree">
+                    <img src="images/page_story02.jpg" alt="">
+                </section>
+            </nav>
+        </main>
+
+        <p id="page-top"><a href="#jump"><img src="images/totop.png"></img></a></p>
+
+        <footer id="storyfooter">
+            <nav id="footer-nav">
+                <ul>
+                    <li>Home</li>
+                    <li>Introduction</li>
+                    <li>Story</li>
+                    <li>Cast</li>
+                </ul>
+            </nav>
+            <p class="copy">Copyright &copy 2020 李福昌 All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+
+</html>

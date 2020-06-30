@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>映画情報サイト | Introduction</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function () {
+            var topBtn = $('#page-top');
+            topBtn.hide();
+            //スクロールが100pxに達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    topBtn.fadeIn();
+                } else {
+                    topBtn.fadeOut();
+                }
+            });
+            //スクロールしてトップ
+            topBtn.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <a id="jump"></a>
+    <div id="wrap">
+        <header>
+            <img src="images/logo.png" alt="" id="logo">
+            <nav id="gnav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li><a href="story.html">Story</a></li>
+                    <li><a href="cast.html">Cast</a></li>
+                </ul>
+            </nav>
+        </header>
+        <img src="images/page_top.jpg" alt="" id="introductionmainvisual">
+        <main id="introductionhome">
+            <section class="introductionsection">
+                <h1 class="introductionh1">イントロダクションテキスト</h1>
+                <p class="introductiontxt">
+                    総裁Xが宇宙に去ってから約3年の年月が流れた。マントル計画も順調に進み、地球は平和を取り戻した。国際科学技術庁が科学忍者隊の解散を決定した矢先、総裁Xが火の玉となって南太平洋ギルバード諸島後方100キロの海上に襲来する。そこを航行中だった豪華客船クイーンマーガレット号[3]は沈没してしまう。総裁Xはそこに乗り合わせていた子供を特殊な装置にかけ、3ヶ月程度で大人に成長させる。そしてその子供をギャラクター司令官・ゲルサドラとして仕立て上げ、ギャラクターを復活させたのだった。科学忍者隊の解散は撤回され、前作で命尽きたジョーの代わりに地球防衛軍からホーク・ゲッツが新G-2号として参加し、復活したギャラクターへの偵察を開始する。だがゲッツは敵のスパイにすり替えられていた。偽ゲッツの手引きで敵のど真ん中に誘い込まれ、窮地に陥る忍者隊だが、偽ゲッツは奇跡的に復活を遂げたジョーによって倒され、ジョーは忍者隊に復帰する。こうして科学忍者隊とギャラクターの戦いが再び始まるのだった。
+                </p>
+            </section>
+            <nav id="introductiontwo">
+                <section id="sectiontwo">
+                    <img src="images/page_introduction01.jpg" alt="">
+                </section>
+
+                <section id="sectionthree">
+                    <img src="images/page_introduction02.jpg" alt="">
+                </section>
+
+            </nav>
+        </main>
+
+        <p id="page-top"><a href="#jump"><img src="images/totop.png"></img></a></p>
+
+        <footer>
+            <nav id="footer-nav">
+                <ul>
+                    <li>Home</li>
+                    <li>Introduction</li>
+                    <li>Story</li>
+                    <li>Cast</li>
+                </ul>
+            </nav>
+            <p class="copy">Copyright &copy 2020 李福昌 All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+
+</html>
