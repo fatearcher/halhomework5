@@ -47,6 +47,11 @@ nav#gnav ul li a {
   color: rgb(191, 201, 158);
 }
 
+nav#footer-nav ul li a {
+  text-decoration: none;
+  color: rgb(191, 201, 158);
+}
+
 img#mainvisual {
   margin: 0 24px;
 }
@@ -173,6 +178,8 @@ main#storyhome {
   display: flex;
   /* border: 1px red solid; */
 }
+
+
 
 section.storysection {
   width: 355px;
